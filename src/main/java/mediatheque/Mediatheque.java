@@ -17,7 +17,9 @@ public class Mediatheque {
 	}
 	
 	public void printOnlyBooks() {
-		throw new UnsupportedOperationException("Not supported yet."); 
+		BookVisitors myVisitor = new BookVisitors();
+		for (Item i : items)
+			i.accept(myVisitor);
 		/*
 		//avec instanceof
 		for (Item i : items)
@@ -27,7 +29,10 @@ public class Mediatheque {
 	}
 
 	public void printOnlyCDs() {
-		throw new UnsupportedOperationException("Not supported yet."); 
+		CDVisitors myVisitor = new CDVisitors();
+		for (Item i : items)
+			i.accept(myVisitor);
+	}
 	}
 
-}
+
