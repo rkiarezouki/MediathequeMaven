@@ -12,8 +12,9 @@ public class Mediatheque {
 	}
 	
 	public void printCatalog() {
+		CatalogVisitors myVisitor = new CatalogVisitors();
 		for (Item i : items)
-			i.print();
+			i.accept(myVisitor);
 	}
 	
 	public void printOnlyBooks() {

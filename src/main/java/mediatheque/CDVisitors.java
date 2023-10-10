@@ -5,7 +5,7 @@ public class CDVisitors implements ItemVisitors {
         System.out.println("VISITING CD : " + item);
     }
     public void visit(Book item) {
-        System.out.println("Book : " + item);
+       // System.out.println("Book : " + item);
     }
 
 }
